@@ -14,8 +14,9 @@ model client {
     measure_uuid     String  @id @default(uuid())
     image_url        String
     customer_code    String
-    measure_datetime Int
+    measure_datetime String
     measure_type     String
-    measure_value    Float
+    measure_value    Float?
     has_confirmed    Boolean @default(false)
+    month            Int
 }

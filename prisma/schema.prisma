@@ -7,16 +7,16 @@ generator client {
 
 datasource db {
     provider = "sqlite"
-    url      = env("DATABASE_URL")
+    url      = "file:./dev.db"
 }
 
-model client {
+model clientMeasures {
     measure_uuid     String  @id @default(uuid())
     image_url        String
     customer_code    String
     measure_datetime String
     measure_type     String
-    measure_value    Float?
+    measure_value    Int
     has_confirmed    Boolean @default(false)
     month            Int
 }

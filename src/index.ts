@@ -22,8 +22,6 @@ server.post("/upload", async (request: FastifyRequest, reply: FastifyReply) => {
         image = temp_image
     }
 
-    console.log(image)
-
     if (
         !image || 
         !customer_code || 
